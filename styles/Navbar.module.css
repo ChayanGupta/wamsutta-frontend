@@ -1,0 +1,114 @@
+.main{
+    min-height: 12vh;
+    max-height: 12vh;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navRight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+.navRight > h3{
+    color: #8e55d3;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.navRight > li {
+    margin-top: 1rem;
+    position: relative;
+}
+
+.navRight > li:hover{
+    cursor: pointer;
+    color: #8e55d3;
+}
+
+.searchDiv{
+    position: relative;
+}
+
+.searchDiv > input {
+    padding: 0.3rem;
+    padding-bottom: 0.4rem;
+    width: 15rem;
+    text-align: center;
+    font-size: inherit;
+}
+
+.searchDiv > input::placeholder{
+    text-align: center;
+}
+
+.search{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.4rem;
+}
+
+.profile{
+    position: relative;
+}
+
+.profile:hover .profileDiv{
+    display: block;
+    z-index: 100;
+}
+
+.profileDiv{
+    position: absolute;
+    width: 8rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid grey;
+    right: 0;
+    top: 1.7rem;
+    display: none;
+    color: black;
+    background-color: white;
+}
+
+.profileDiv > h6{
+    display: block;
+}
+
+.linkTag{
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.linkTag:hover{
+    color: #e14149;
+}
+
+.cartTotal{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 8pt;
+    text-align: center;
+    line-height: 20px;
+    left: 25px;
+    top: -10px;
+    z-index: 50;
+}
+
+
+.linkTags{
+    color: inherit;
+    text-decoration: none;
+}

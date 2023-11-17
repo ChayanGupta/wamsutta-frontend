@@ -1,0 +1,99 @@
+.my-account-main-div {
+    width: 75%;
+    min-height: 70vh;
+}
+
+.account-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.my-dashboard-title {
+    letter-spacing: .2ch;
+    font-weight: 700;
+    height: 3rem;
+    padding: 1rem;
+}
+
+.primary-information {
+    border: 1px solid gray;
+    padding: 1rem;
+    letter-spacing: .2ch;
+    width: 80%;
+}
+
+.primary-information>h4 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.primary-information>h4,
+.primary-information>h5 {
+    margin: 1rem;
+}
+
+.address-book-title {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: .1ch;
+    width: 80%;
+}
+
+.manage-address-h4 {
+    cursor: pointer;
+}
+
+.manage-address-h4:hover {
+    color: #8e55d3;
+}
+
+.address-book {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+    border: 1px solid gray;
+    width: 80%;
+}
+
+.address-book > div > h5 {
+    margin: .5rem 0;
+}
+
+.edit-delete-address-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-address-btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.edit-address-btn {
+    margin: 1rem 0.2rem;
+    width: 93.75px;
+    height: 37.5px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #8e55d3 0%, #7927df 100%);
+    box-shadow: 0 20px 30px -6px rgba(111, 4, 241, 0.5);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    color: white;
+}
+
+.edit-address-btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.edit-address-btn:active {
+    opacity: 0.5;
+}

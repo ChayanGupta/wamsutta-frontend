@@ -1,0 +1,31 @@
+/* Start Bootstrap carousel */
+.itemP {
+    height: 100%;
+    margin-top: 0.5rem;
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+/* End Bootstrap carousel */
+
+.bannerBottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0, 0.5);
+}
+
+.bannerBottom > div {
+    text-align: center;
+}
+
+.bannerBottom > div > h3 {
+    margin-top: 0.8rem;
+}

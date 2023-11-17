@@ -1,0 +1,64 @@
+.why-choose-us-main-div{
+    min-height: 30vh;
+    width: 100%;
+    background-color: rgba(233, 219, 219, 0.596);
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-choose-us-main-div > div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-choose-us-main-div > div:first-child >h1{
+    position: relative;
+    width: fit-content;
+    text-align: center;
+    font-weight: bold;
+}
+
+.why-choose-us-main-div > div:first-child > h1::before{
+    content: "";
+    width: 50%;
+    height: 5px;
+    background-color: #8e55d3;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 25%;
+    z-index: 20;
+}
+
+.why-choose-us-main-div > div:first-child > h1::after{
+    content: "";
+    width: 90%;
+    height: 5px;
+    background-color: grey;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 5%;
+    opacity: 0.2;
+}
+
+.why-choose-us-main-div > div:first-child > p {
+    margin-top: 1rem;
+    margin-left: -1rem;
+}
+
+.why-choose-us-main-div > div:first-child > p > span {
+    color: #8e55d3;
+}
+
+.why-choose-us-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+}

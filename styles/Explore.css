@@ -1,0 +1,17 @@
+.explore-main-div{
+    margin-top: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.explore-main-div > h1 {
+    font-weight: bold;
+}
+
+.explore-cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+}

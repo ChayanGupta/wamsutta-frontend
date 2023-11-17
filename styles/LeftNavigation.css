@@ -1,0 +1,36 @@
+.left-navigation-main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25rem;
+    height: 70vh;
+    border-right: 1px solid lightgray;
+}
+
+.left-navigation-main-div>h3 {
+    cursor: pointer;
+    position: relative;
+}
+
+.left-navigation-main-div>h3:hover {
+    color: #8e55d3;
+}
+
+.left-navigation-main-div>h3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: .2rem;
+    bottom: -1rem;
+    left: 0;
+    background-color: #8e55d3;
+    transform-origin: bottom right;
+    transition: transform 1s linear;
+}
+
+.left-navigation-main-div>h3:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
