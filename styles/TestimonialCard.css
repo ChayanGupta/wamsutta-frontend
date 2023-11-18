@@ -1,7 +1,7 @@
 .testimonial-card-div{
     border: 1px solid #808080;
     width: 35%;
-    height: 15vw;
+    height: auto;
     padding: 2rem;
     margin-top: 1rem;
     margin-left: 5%;
@@ -26,4 +26,10 @@
 .card-profile-img{
     object-fit: cover;
     border-radius: 50%;
+}
+
+@media screen and (max-width:768px) {
+    .testimonial-card-div{
+        width: 80%;
+    }
 }

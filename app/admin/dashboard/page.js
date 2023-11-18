@@ -1,7 +1,6 @@
 "use client"
 import { useRouter } from 'next/navigation'
 import React, { useEffect } from 'react'
-import AdminNavbar from '@/admin/AdminNavbar';
 import AdminSidebar from '@/admin/AdminSidebar';
 import SuperComponent from '@/admin/SuperComponent';
 import { ToastContainer, toast } from 'react-toastify';
@@ -19,25 +18,22 @@ export default function Dashboard() {
   useEffect(() => {
     async function loadData() {
       const user = await decryptData('user')
-      if (user?.role !== 'ROLE_ADMIN') {
-        router.push('/')
+      if(user!==null){
+        if (user?.role !== 'ROLE_ADMIN') {
+          router.push('/')
+        }
+        dispatch(setNavActive('Base'))
       }
-      dispatch(setNavActive('Base'))
     }
     loadData();
   }, [dispatch, router])
 
-
-  const categoryLoading = false;
-  const productLoading = false;
-
   return (
-    <div className='w-full h-screen flex  bg-gray-50 overflow-hidden'>
+    <div className='w-full h-screen flex bg-gray-50 overflow-hidden'>
       <AdminSidebar />
-      <div className='w-full h-full '>
-        <AdminNavbar />
+      <div className='w-full h-full'>
         <div className='w-full h-5/6  flex flex-wrap items-start justify-center overflow-y-auto  px-4 py-2'>
-          {categoryLoading || productLoading ? <Loading /> : <SuperComponent />}
+          <SuperComponent />
         </div>
       </div>
       <ToastContainer

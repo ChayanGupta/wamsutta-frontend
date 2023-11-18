@@ -1,3 +1,25 @@
 .product-container{
     width: 50vw;
 }
+
+@media screen and (max-width:1200px) {
+    .magnify-image{
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width:1055px) {
+    .title-font{
+        font-size: large;
+    }
+    .leading-relaxed{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .product-item-div{
+        justify-content: space-evenly;
+    }
+}
+

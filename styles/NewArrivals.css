@@ -59,9 +59,52 @@
     text-transform: uppercase;
     letter-spacing: 0.3ch;
     font-size: small;
+    border-radius: 5%;
 }
 
 .arrival-item-footer>button:hover {
     background-color: black;
     color: white;
+}
+
+@media screen and (max-width:968px) {
+    .arrival-item-div > h5{
+        font-size: smaller;
+    }
+
+    .arrival-item-footer > p {
+        font-size: smaller;
+    }
+
+    .arrival-item-footer > button {
+        padding: 0.2rem 0.1rem;
+        font-size:smaller;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    .arrival-item-footer > button {
+        padding: 0.1rem 0.05rem;
+        font-size:x-small;
+        min-width: 6rem;
+    }
+}
+
+@media screen and (max-width:812px) {
+
+    .arrival-item-footer > button {
+        padding: 0.05rem 0.25rem;
+        font-size:x-small;
+        min-width: 4rem;
+    }
+}
+
+@media screen and (max-width:640px) {
+
+    .arrival-item-footer > button {
+        padding: 0.12rem;
+        font-size:xx-small;
+        min-width: 2rem;
+    }
 }

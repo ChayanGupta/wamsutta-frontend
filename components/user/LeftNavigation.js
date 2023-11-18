@@ -8,27 +8,18 @@ const LeftNavigation = ({ setShowComponent }) => {
       <h3 onClick={() => setShowComponent({
         myAccount: true,
         addAddress: false,
-        personalInformation: false,
         myOrders: false
       })}>My Account</h3>
       <h3 onClick={() => setShowComponent({
         myAccount: false,
         addAddress: false,
-        personalInformation: false,
         myOrders: true
       })}>Orders</h3>
       <h3 onClick={() => setShowComponent({
         myAccount: false,
         addAddress: true,
-        personalInformation: false,
         myOrders: false
       })}>Address</h3>
-      <h3 onClick={() => setShowComponent({
-        myAccount: false,
-        addAddress: false,
-        personalInformation: true,
-        myOrders: false
-      })}>Personal Information</h3>
     </div>
   )
 }

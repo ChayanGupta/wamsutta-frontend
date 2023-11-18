@@ -15,3 +15,27 @@
     margin-bottom: 1rem;
     font-weight: bold;
 }
+
+@media screen and (max-width:968px) {
+    .header-div > p {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width:812px) {
+    .header-div > p {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width:640px) {
+
+    .header-div{
+        padding: 0.05rem 0.5rem;
+        min-height: auto;
+    }
+
+    .header-div > p {
+        font-size: xx-small;
+    }
+}

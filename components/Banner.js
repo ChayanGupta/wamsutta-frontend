@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import styles from '../styles/Banner.module.css'
 import Image1 from '../public/pexels-leah-kelley-3586911.jpg'
 import Image2 from '../public/pexels-curtis-adams-3555618.jpg'
@@ -27,15 +27,15 @@ const Banner = () => {
                 ))}
             </Carousel>
             <div className={styles.bannerBottom}>
-                <div>
+                <div className='flex flex-col justify-center items-center'>
                     <Truck color='#8e55d3' size={36} />
                     <h3>Free Shipping</h3>
                 </div>
-                <div>
+                <div className='flex flex-col justify-center items-center'>
                     <Package color='#8e55d3' size={36} />
                     <h3>10 Days Return policy</h3>
                 </div>
-                <div>
+                <div className='flex flex-col justify-center items-center'>
                     <BadgePercent color="#8e55d3" size={36} />
                     <h3>Daily Discounts</h3>
                 </div>

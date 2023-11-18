@@ -3,10 +3,12 @@ import { useSelector } from 'react-redux'
 import TileContainer from './TileContainer';
 import ProductDataTable from './ProductDataTable';
 import CategoryDataTable from './CategoryDataTable';
-import PendingOrdersDataTable from './PendingOrdersDataTable';
+import PendingOrdersDataTable from './ReviewDataTable';
 import CompletedOrderDataTable from './CompletedOrderDataTable';
 import AddCategory from './AddCategory';
 import AddProduct from './AddProduct';
+import AddReview from './AddReview';
+import ReviewDataTable from './ReviewDataTable';
 
 export default function SuperComponent() {
     const navActive = useSelector((state) => state.AdminNav.ActiveNav)
@@ -17,14 +19,14 @@ export default function SuperComponent() {
             return <ProductDataTable />
         case 'activeCategories':
             return <CategoryDataTable/>
-        case 'activePendingOrder':
-            return <PendingOrdersDataTable/>
-        case 'activeDeliveredOrder':
-            return <CompletedOrderDataTable/>
         case 'activeAddProduct':
             return <AddProduct/>
         case 'activeAddCategory':
             return <AddCategory/>
+        case 'activeAddReview':
+            return <AddReview/>
+        case 'activeReview':
+            return <ReviewDataTable/>
         default:
             return <TileContainer />;
     }

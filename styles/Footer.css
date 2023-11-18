@@ -24,10 +24,16 @@
     content: "\00A9 Copyright by Wamsutta. All Rights Reserved.";
     position: absolute;
     bottom: 0.5rem;
-    left: 40%;
+    text-align: center;
 }
 
 .link-tags{
     color: inherit;
     text-decoration: none;
+}
+
+@media screen and (max-width:812px) {
+    .footer-main-div{
+        font-size: small;
+    }
 }

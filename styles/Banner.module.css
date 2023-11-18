@@ -29,3 +29,9 @@
 .bannerBottom > div > h3 {
     margin-top: 0.8rem;
 }
+
+@media screen and (max-width:968px) {
+    .bannerBottom > div > h3 {
+        font-size: smaller;
+    }
+}

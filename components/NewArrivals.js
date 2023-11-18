@@ -13,16 +13,17 @@ const NewArrivals = () => {
   useEffect(() => {
     getNewArrivals().then(res => {
       setFeaturedProduct(res)
+      console.log(res)
     })
   }, [])
 
-  const handleClick = (id) => {
-    router.push(`/products/product?prod=${(Math.random() + 1).toString(36).substring(2) + Math.random().toFixed(2)*100 + (Math.random() + 1).toString(36).substring(2) + Math.random().toFixed(2)*100 + 'wdz' + id }`)
+  const handleClick = (id, name) => {
+    router.push(`/products/product?prod=${`${name}1cat`+(Math.random() + 1).toString(36).substring(2) + Math.random().toFixed(2)*100 + (Math.random() + 1).toString(36).substring(2) + Math.random().toFixed(2)*100 + 'wdz' + id }`)
   }
 
   return (
     <div className='arrival-main-div'>
-      <h1>New Arrivals</h1>
+      <h1>Best Selling</h1>
       <div className='arrival-div'>
         {featuredProduct.map((prod) => {
           return <div className='arrival-item-div' key={prod.id}>
@@ -30,7 +31,7 @@ const NewArrivals = () => {
             <h5 style={{display:'-webkit-box',WebkitLineClamp:4,WebkitBoxOrient:'vertical',lineClamp:4,overflow:'hidden',textOverflow:'ellipsis'}}>{prod.productName}</h5>
             <div className='arrival-item-footer'>
               <p>${prod.price}</p>
-              <button onClick={()=>handleClick(prod.id)}>Shop Now</button>
+              <button onClick={()=>handleClick(prod.id, prod.categoryId)}>Shop Now</button>
             </div>
           </div>
         })}

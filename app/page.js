@@ -12,6 +12,7 @@ import Image4 from '../public/pexels-tim-douglas-6567607.jpg'
 import Testimonial from '@/Testimonial'
 import Head from 'next/head'
 import NewArrivals from '@/NewArrivals'
+import Distributer from '@/Distributer'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       {/* <Brands/> */}
       <NewArrivals />
       <Explore />
+      <Distributer/>
       <WhyChooseUs />
       <div className={styles.tempMainDiv}>
         <div className={styles.tempDiv}>

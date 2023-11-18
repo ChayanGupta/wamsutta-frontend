@@ -1,20 +1,36 @@
 'use client'
-import { getProductDetails } from '@/services/product'
+import { getProductDetails, getSpecificCategoryProducts } from '@/services/product'
 import React, { useEffect, useState } from 'react'
 import ReactImageMagnify from 'react-image-magnify'
 import '../styles/ProductItem.css'
 import { useDispatch } from 'react-redux'
 import { addCartData, addWishlistData } from '@/utils/CartSlice'
+import Image from 'next/image'
+import CustomerReviews from './CustomerReviews'
+import { getProductReview } from '@/services/review'
 
 const ProductItem = ({ search }) => {
 
     const [product, setProduct] = useState(null)
+    const [products, setProducts] = useState([])
+    const [reviews, setReviews] = useState([])
+    const [main, setMain] = useState(product?.mainImage || '')
     const dispatch = useDispatch()
 
     useEffect(() => {
         const searchString = search.slice(search.lastIndexOf('wdz'))
+        const categoryName = search.slice(0,search.indexOf('1'))
         getProductDetails(searchString.slice(3)).then(res => {
             setProduct(res)
+            console.log(res)
+            getProductReview(res.id).then(response=>{
+                console.log(response)
+                setReviews(response)
+            })
+        })
+        getSpecificCategoryProducts(categoryName).then(res => {
+            setProducts(res)
+            console.log(res)
         })
     }, [search])
 
@@ -26,47 +42,32 @@ const ProductItem = ({ search }) => {
         dispatch(addWishlistData({...product, itemQuantity:1}))
     }
 
+    const changeMainImage = (url) => {
+        setMain(url)
+    }
+
     return (
+        <>
         <section className="text-gray-600 body-font overflow-hidden">
             <div className="container py-24 mx-auto">
-                <div className="mx-auto flex flex-wrap">
+                <div className="mx-auto flex flex-wrap product-item-div">
                     <ReactImageMagnify {...{
                         smallImage: {
                             alt: 'product',
-                            src: product?.mainImage,
+                            src: main || product?.mainImage,
                             width: 400,
                             height: 400,
                         },
                         largeImage: {
-                            src: product?.mainImage,
+                            src: main || product?.mainImage,
                             width: 1100,
                             height: 1100,
                         },
-                        imageClassName:'lg:w-1/2 w-full lg:h-auto h-64 object-fit object-center rounded',
+                        imageClassName:'lg:w-1/2 w-full lg:h-auto h-64 object-fit object-center rounded magnify-image',
                     }}
                     />
                     <div className="lg:w-1/2 w-full lg:pl-10 mt-6 lg:mt-0 product-container">
-                        <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product?.productName}</h1>
-                        <div className="flex mb-4">
-                            <span className="flex items-center">
-                                <svg fill="currentColor" stroke="currentColor" strokeLineCap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                </svg>
-                                <svg fill="currentColor" stroke="currentColor" strokeLineCap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                </svg>
-                                <svg fill="currentColor" stroke="currentColor" strokeLineCap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                </svg>
-                                <svg fill="currentColor" stroke="currentColor" strokeLineCap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                </svg>
-                                <svg fill="none" stroke="currentColor" strokeLineCap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                </svg>
-                                <span className="text-gray-600 ml-3">4 Reviews</span>
-                            </span>
-                        </div>
+                        <h1 className="text-gray-900 text-3xl title-font font-medium mb-5">{product?.productName}</h1>
                         <p className="leading-relaxed">{product?.description}</p>
                         <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                             <div className="flex">
@@ -86,9 +87,25 @@ const ProductItem = ({ search }) => {
                             </button>
                         </div>
                     </div>
+                    <div className='mt-2 flex justify-around items-center overflow-auto'>
+                        <Image className='border rounded-lg p-2 w-36 h-36 m-2' alt='product' onClick={()=>changeMainImage(product?.mainImage)} src={product?.mainImage} width={150} height={150}/>
+                        <Image className='border rounded-lg p-2 w-36 h-36 m-2' alt='product' onClick={()=>changeMainImage(product?.image1)} src={product?.image1} width={150} height={150}/>
+                        <Image className='border rounded-lg p-2 w-36 h-36 m-2' alt='product' onClick={()=>changeMainImage(product?.image2)} src={product?.image2} width={150} height={150}/>
+                        <Image className='border rounded-lg p-2 w-36 h-36 m-2' alt='product' onClick={()=>changeMainImage(product?.image3)} src={product?.image3} width={150} height={150}/>
+                        <Image className='border rounded-lg p-2 w-36 h-36 m-2' alt='product' onClick={()=>changeMainImage(product?.image4)} src={product?.image4} width={150} height={150}/>
+                        <Image className='border rounded-lg p-2 w-36 h-36 m-2' alt='product' onClick={()=>changeMainImage(product?.image5)} src={product?.image5} width={150} height={150}/>
+                    </div>
+                </div>
+                <h1 className='text-2xl mt-5 font-extrabold'>Related products</h1>
+                <div className='flex items-center gap-x-2 border p-2 mt-2 overflow-x-auto'>
+                    {products.map((prod)=>{
+                        return <Image key={prod.id} className='w-36 h-36 m-2' src={prod?.mainImage} alt='product' width={150} height={150}/>
+                    })}
                 </div>
             </div>
         </section>
+        <CustomerReviews reviews={reviews}/>
+        </>
     )
 }
 

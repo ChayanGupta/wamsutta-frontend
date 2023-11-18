@@ -9,5 +9,5 @@ export const getProfileDetails = async (email) => {
         headers:{
             Authorization:`Bearer ${accessToken}`
         }
-    })
+    }).then(res=>res.data)
 }

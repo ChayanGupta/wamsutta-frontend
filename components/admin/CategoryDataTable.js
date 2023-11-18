@@ -59,10 +59,12 @@ export default function CategoryDataTable() {
     })
     async function loadData() {
       const user = await decryptData('user')
-      if (user?.role !== 'ROLE_ADMIN') {
-        router.push('/')
+      if(user!=null){
+        if (user?.role !== 'ROLE_ADMIN') {
+          router.push('/')
+        }
+        setToken(user.accessToken)
       }
-      setToken(user.accessToken)
     }
     loadData();
   }, [router])

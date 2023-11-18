@@ -16,7 +16,7 @@ const Products = ({ name }) => {
     }, [name])
 
     const handleClick = (id) => {
-        router.push(`/products/product?prod=${(Math.random() + 1).toString(36).substring(2) + Math.random().toFixed(2)*100 + (Math.random() + 1).toString(36).substring(2) + Math.random().toFixed(2)*100 + 'wdz' + id }`)
+        router.push(`/products/product?prod=${`${name}1cat`+(Math.random() + 1).toString(36).substring(2) + Math.random().toFixed(2)*100 + (Math.random() + 1).toString(36).substring(2) + Math.random().toFixed(2)*100 + 'wdz' + id }`)
     }
 
     return (

@@ -23,10 +23,12 @@ export default function ProductDataTable() {
     })
     async function loadData() {
       const user = await decryptData('user')
-      if (user?.role !== 'ROLE_ADMIN') {
-        router.push('/')
+      if(user!=null){
+        if (user?.role !== 'ROLE_ADMIN') {
+          router.push('/')
+        }
+        setToken(user.accessToken)
       }
-      setToken(user.accessToken)
     }
     loadData();
   }, [router])
@@ -49,6 +51,11 @@ export default function ProductDataTable() {
 
 
   const columns = [
+    {
+      name: 'Id',
+      cell: (row) => <p>{row?.id}</p>,
+      sortable: true,
+    },
     {
       name: 'Name',
       cell: (row) => <p>{row?.productName}</p>,

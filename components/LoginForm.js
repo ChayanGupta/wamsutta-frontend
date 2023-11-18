@@ -106,7 +106,6 @@ const LoginForm = () => {
                     onChange={handleChange} value={formData.password} required />
             </div>
             <button id="button" type='submit'>Submit</button>
-            <a className="forgotLink" href="#">Forgot your password?</a>
             <p className="forgotLink">New to Wamsutta? <Link href="/register">Create an account</Link></p>
         </form>
     )

@@ -62,3 +62,9 @@
     row-gap: 1rem;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width:768px) {
+    .why-choose-us-div{
+        flex-direction: column;
+    }
+}

@@ -9,6 +9,9 @@ export const encryptData = (name, data) => {
 
 export const decryptData = async (name) => {
     const encrypted = localStorage.getItem(name);
-    const decrypted = CryptoJS.AES.decrypt(encrypted, SECRET_KEY).toString(CryptoJS.enc.Utf8);
-    return await JSON.parse(decrypted);
+    if(encrypted!==null){
+        const decrypted = CryptoJS.AES.decrypt(encrypted, SECRET_KEY).toString(CryptoJS.enc.Utf8);
+        return await JSON.parse(decrypted);
+    }
+    return null;
 }
