@@ -47,7 +47,7 @@ const Contact = () => {
             />
             <div className='contact-us-heading'>
                 <h1>Contact us</h1>
-                <p>We'd love to hear from you. Whether it is a suggestion, appreciation or some things that you'd rather we do differently, please feel free to connect with us.</p>
+                <p>We&apos;d love to hear from you. Whether it is a suggestion, appreciation or some things that you&apos;d rather we do differently, please feel free to connect with us.</p>
             </div>
             <div className='contact-us-form'>
                 <div className="card">

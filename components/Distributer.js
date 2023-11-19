@@ -16,7 +16,7 @@ const Distributer = () => {
                     <div>
                         <h1 className='text-2xl'>BED BATH & BEYOND</h1>
                         <p>799 Coliseum Way,</p>
-                        <p>Midvale, UT </p>
+                        <p>Midvale, UT,</p>
                         <p>United States - 84047</p>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const Distributer = () => {
                         <TfiLocationPin size={30} />
                     </div>
                     <div>
-                        <h1 className='text-2xl'>SRP LINEN</h1>
+                        <h1 className='text-2xl'>SRP Linen Mercantile Pvt. Ltd.</h1>
                         <p>273-M, Khatiwala Tank,</p>
                         <p>Indore, Madhya Pradesh,</p>
                         <p>India - 452001</p>
@@ -35,10 +35,10 @@ const Distributer = () => {
             <h5 className='text-center'>Also available at</h5>
             <div className='flex justify-center gap-x-4 items-center mb-4'>
                 <div className='bg-white pr-2 pl-2 max-h-28'>
-                    <Image src={Amazon} width={300} height={400} />
+                    <Image src={Amazon} width={300} height={400} alt='' />
                 </div>
                 <div className='bg-white pt-2 pr-2 pl-2 max-h-28'>
-                    <Image src={Walmart} width={300} height={400} />
+                    <Image src={Walmart} width={300} height={400} alt='' />
                 </div>
             </div>
             <h6 className='text-center text-red-400 underline'>Note: Be aware of frauds, purchase items only from trusted sources.</h6>

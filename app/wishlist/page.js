@@ -3,7 +3,7 @@ import WishlistPage from '@/WishlistPage'
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const page = () => {
+const Page = () => {
     const cart = useSelector(state => state.Cart)
 
     return (
@@ -11,4 +11,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='header-div'>
         <Megaphone />
-        <p>&nbsp;&nbsp; Get 30% off on your first order using the coupon code "WELCOME30" during checkout.</p>
+        <p>&nbsp;&nbsp; Get 30% off on your first order using the coupon code &quot;WELCOME30&quot; during checkout.</p>
     </div>
   )
 }

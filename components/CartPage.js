@@ -48,7 +48,7 @@ const CartPage = ({ cart }) => {
             <div className='border rounded-xl mt-6 w-full'>
                 {cart?.map((item) => {
                     return <div className='p-2 inline-grid justify-center items-center gap-x-24' key={item.id} style={{ gridTemplateColumns: '25vw 25vw 5vw 20vw' }}>
-                        <Image src={item.mainImage} width={300} height={200} />
+                        <Image src={item.mainImage} alt='' width={300} height={200} />
                         <h1 className='text-lg'>{item.productName}</h1>
                         <div className='flex justify-around items-center text-xl gap-x-4'>
                             <FaMinus onClick={() => removeQuantity(item)} className='cursor-pointer' />
@@ -60,7 +60,7 @@ const CartPage = ({ cart }) => {
                 })}
             </div>
             {cart.length === 0 ? <div>
-                <Image src={Image1} className='mx-auto' />
+                <Image src={Image1} alt='' className='mx-auto' />
                 <h1 className='text-center text-3xl'>Your cart is empty. <span onClick={shopNow} className='cursor-pointer text-blue-500 underline underline-offset-8'>Shop Now</span></h1>
             </div> : <div className='flex justify-center gap-x-3 text-xl mt-4 text-white items-center'>
                 <button className='bg-purple-500 rounded-md p-2' onClick={() => router.push('/')} >Buy More</button>

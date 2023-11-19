@@ -10,7 +10,7 @@ import MyOrders from '@/user/MyOrders'
 import { Toaster } from 'react-hot-toast'
 import { decryptData } from '../../../secure/encrypt-decrypt'
 
-const User = () => {
+const Page = () => {
 
     const user = useSelector(state => state.userReducer)
     const router = useRouter()
@@ -41,4 +41,4 @@ const User = () => {
     )
 }
 
-export default User
+export default Page

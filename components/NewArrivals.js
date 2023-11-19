@@ -13,8 +13,8 @@ const NewArrivals = () => {
   useEffect(() => {
     getNewArrivals().then(res => {
       setFeaturedProduct(res)
-      console.log(res)
-    })
+      console.log("line 16--->",res)
+    }).catch(err=>console.log("line 17-->", err))
   }, [])
 
   const handleClick = (id, name) => {

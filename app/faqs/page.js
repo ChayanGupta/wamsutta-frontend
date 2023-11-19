@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/FAQ.css'
 
-const page = () => {
+const Page = () => {
     return (
         <section className='faq-main-div'>
             <div className='faq-heading-div'>
@@ -56,10 +56,10 @@ const page = () => {
                 <section className="accordion">
                     <input type="checkbox" name="collapse2" id="handle6" />
                     <h2 className="handle">
-                        <label htmlFor="handle6">What's the difference between King and California King size fitted sheet?</label>
+                        <label htmlFor="handle6">What&apos;s the difference between King and California King size fitted sheet?</label>
                     </h2>
                     <div className="content">
-                        <p>A King size fitted sheet is 78" X 80" and California King size fitted sheet is 72" X 84". The size of the flat sheet in both the King and California variants are the same - 108" x 102" and so are the pillowcases 20”x 40”. Please check our size guide page for more information.</p>
+                        <p>A King size fitted sheet is 78&quot; X 80&quot; and California King size fitted sheet is 72&quot; X 84&quot;. The size of the flat sheet in both the King and California variants are the same - 108&quot; x 102&quot; and so are the pillowcases 20&quot;x 40&quot;. Please check our size guide page for more information.</p>
                     </div>
                 </section>
                 <section className="accordion">
@@ -76,4 +76,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

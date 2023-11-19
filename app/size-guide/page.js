@@ -3,7 +3,7 @@ import React from 'react'
 import '../../styles/SizeGuide.css'
 import { useRouter } from 'next/navigation'
 
-const page = () => {
+const Page = () => {
 
     const router = useRouter()
 
@@ -36,28 +36,28 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="3">4 Pc</td>
                             <td className="t-left w25">1 Fitted Sheet</td>
-                            <td className="t-left w25">61” x 80” + 15”</td>
+                            <td className="t-left w25">61&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">90” x 102 + 4”</td>
+                            <td className="t-left w25">90&quot; x 102 + 4&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">2 Standard Pillowcases</td>
-                            <td className="t-left w25">20” x 30”</td>
+                            <td className="t-left w25">20&quot; x 30&quot;</td>
                         </tr>
                         <tr>
                             <td className="w20" rowspan="3">6 Pc</td>
                             <td className="t-left w25">1 Fitted Sheet</td>
-                            <td className="t-left w25">61” x 80” + 15”</td>
+                            <td className="t-left w25">61&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">90” x 102 + 4”</td>
+                            <td className="t-left w25">90&quot; x 102 + 4&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">4 Standard Pillowcases</td>
-                            <td className="t-left w25">20” x 30”</td>
+                            <td className="t-left w25">20&quot; x 30&quot;</td>
                         </tr>
                         <tr>
                             <td colspan="4">&nbsp;</td>
@@ -68,28 +68,28 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="3">4 Pc</td>
                             <td className="t-left w25">1 Fitted Sheet</td>
-                            <td className="t-left w25">79” x 80” + 15”</td>
+                            <td className="t-left w25">79&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">108” x 102 + 4”</td>
+                            <td className="t-left w25">108&quot; x 102 + 4&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">2 King Size Pillowcases</td>
-                            <td className="t-left w25">20” x 40”</td>
+                            <td className="t-left w25">20&quot; x 40&quot;</td>
                         </tr>
                         <tr>
                             <td className="w20" rowspan="3">6 Pc</td>
                             <td className="t-left w25">1 Fitted Sheet</td>
-                            <td className="t-left w25">79” x 80” + 15”</td>
+                            <td className="t-left w25">79&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">108” x 102 + 4”</td>
+                            <td className="t-left w25">108&quot; x 102 + 4&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">4 King Size Pillowcases</td>
-                            <td className="t-left w25">20” x 40”</td>
+                            <td className="t-left w25">20&quot; x 40&quot;</td>
                         </tr>
                         <tr>
                             <td colspan="4">&nbsp;</td>
@@ -100,15 +100,15 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="3">4 Pc</td>
                             <td className="t-left w25">1 Fitted Sheet</td>
-                            <td className="t-left w25">73” x 84” + 15"</td>
+                            <td className="t-left w25">73&quot; x 84&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">108” x 102" + 4”</td>
+                            <td className="t-left w25">108&quot; x 102&quot; + 4&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">2 King Size Pillowcases</td>
-                            <td className="t-left w25">20” x 40”</td>
+                            <td className="t-left w25">20&quot; x 40&quot;</td>
                         </tr>
                         <tr>
                             <td colspan="4">&nbsp;</td>
@@ -119,15 +119,15 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="3">3 Pc</td>
                             <td className="t-left w25">1 Fitted Sheet</td>
-                            <td className="t-left w25">40” x 75” + 15”</td>
+                            <td className="t-left w25">40&quot; x 75&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">66” x 96 " + 4”</td>
+                            <td className="t-left w25">66&quot; x 96&quot; + 4&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Standard Pillowcase</td>
-                            <td className="t-left w25">20” x 30”</td>
+                            <td className="t-left w25">20&quot; x 30&quot;</td>
                         </tr>
                         <tr>
                             <td colspan="4">&nbsp;</td>
@@ -138,15 +138,15 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="3">3 Pc</td>
                             <td className="t-left w25">1 Fitted Sheet</td>
-                            <td className="t-left w25">40” x 80” + 15”</td>
+                            <td className="t-left w25">40&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">66” x 102” + 4"</td>
+                            <td className="t-left w25">66&quot; x 102&quot; + 4&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Standard Pillowcase</td>
-                            <td className="t-left w25">20” x 30”</td>
+                            <td className="t-left w25">20&quot; x 30&quot;</td>
                         </tr>
                         <tr>
                             <td colspan="4">&nbsp;</td>
@@ -157,15 +157,15 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="3">5 Pc</td>
                             <td className="t-left w25">2 Fitted Sheets</td>
-                            <td className="t-left w25">39” x 80” + 15”</td>
+                            <td className="t-left w25">39&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">108” x 102</td>
+                            <td className="t-left w25">108&quot; x 102&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">2 King Size Pillowcases</td>
-                            <td className="t-left w25">20” x 40”</td>
+                            <td className="t-left w25">20&quot; x 40&quot;</td>
                         </tr>
                         <tr>
                             <td colspan="4">&nbsp;</td>
@@ -176,15 +176,15 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="3">4 Pc</td>
                             <td className="t-left w25">1 Fitted Sheet</td>
-                            <td className="t-left w25">55” x 75” + 15”</td>
+                            <td className="t-left w25">55&quot; x 75&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">81” x 96” + 4</td>
+                            <td className="t-left w25">81&quot; x 96&quot; + 4</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">2 Standard Pillowcases</td>
-                            <td className="t-left w25">20” x 30”</td>
+                            <td className="t-left w25">20&quot; x 30&quot;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -206,11 +206,11 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="2">3 Pc</td>
                             <td className="t-left w25">1 Queen Duvet Cover</td>
-                            <td className="t-left w25">90” x 90”</td>
+                            <td className="t-left w25">90&quot; x 90&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">2 Standard Pillow Shams</td>
-                            <td className="t-left w25">20” x 26”</td>
+                            <td className="t-left w25">20&quot; x 26&quot;</td>
                         </tr>
                         <tr>
                             <td colspan="4">&nbsp;</td>
@@ -221,11 +221,11 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="2">3 Pc</td>
                             <td className="t-left w25">1 King Duvet Cover</td>
-                            <td className="t-left w25">104” x 90"</td>
+                            <td className="t-left w25">104&quot; x 90&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">2 King Pillow Shams</td>
-                            <td className="t-left w25">20” x 36”</td>
+                            <td className="t-left w25">20&quot; x 36&quot;</td>
                         </tr>
                         <tr>
                             <td colspan="4">&nbsp;</td>
@@ -236,11 +236,11 @@ const page = () => {
                         <tr>
                             <td className="w20" rowspan="2">2 Pc</td>
                             <td className="t-left w25">1 Twin Duvet Cover</td>
-                            <td className="t-left w25">68” x 86”</td>
+                            <td className="t-left w25">68&quot; x 86&quot;</td>
                         </tr>
                         <tr>
                             <td className="t-left w25">1 King Size Pillowcases</td>
-                            <td className="t-left w25">20” x 26”</td>
+                            <td className="t-left w25">20&quot; x 26&quot;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -260,37 +260,37 @@ const page = () => {
                             <td className="w15">King</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Fitted sheet</td>
-                            <td className="t-left w25">78” x 80” + 15”</td>
+                            <td className="t-left w25">78&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">Cal King</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Fitted sheet</td>
-                            <td className="t-left w25">73” x 84” + 15”</td>
+                            <td className="t-left w25">73&quot; x 84&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">Queen</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Fitted sheet</td>
-                            <td className="t-left w25">61” x 80” + 15”</td>
+                            <td className="t-left w25">61&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">Twin</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Fitted sheet</td>
-                            <td className="t-left w25">39” x 75” + 15”</td>
+                            <td className="t-left w25">39&quot; x 75&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">Twin XL</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Fitted sheet</td>
-                            <td className="t-left w25">39” x 80” + 15”</td>
+                            <td className="t-left w25">39&quot; x 80&quot; + 15&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">Full</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Fitted sheet</td>
-                            <td className="t-left w25">55” x 75” + 15”</td>
+                            <td className="t-left w25">55&quot; x 75&quot; + 15&quot;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -310,25 +310,25 @@ const page = () => {
                             <td className="w15">King</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">108” x 102”</td>
+                            <td className="t-left w25">108&quot; x 102&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">Queen</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">90” x 102”</td>
+                            <td className="t-left w25">90&quot; x 102&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">Twin XL</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">66” x 102”</td>
+                            <td className="t-left w25">66&quot; x 102&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">Full</td>
                             <td className="w20">1 Pc</td>
                             <td className="t-left w25">1 Flat Sheet</td>
-                            <td className="t-left w25">81” x 102”</td>
+                            <td className="t-left w25">81&quot; x 102&quot;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -348,13 +348,13 @@ const page = () => {
                             <td className="w15">Standard / Queen</td>
                             <td className="w20">2 Pc</td>
                             <td className="t-left w25">2 Standard Pillowcases</td>
-                            <td className="t-left w25">20” x 30”</td>
+                            <td className="t-left w25">20&quot; x 30&quot;</td>
                         </tr>
                         <tr>
                             <td className="w15">King</td>
                             <td className="w20">2 Pc</td>
                             <td className="t-left w25">2 King Size Pillowcases</td>
-                            <td className="t-left w25">20” x 40”</td>
+                            <td className="t-left w25">20&quot; x 40&quot;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -363,4 +363,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

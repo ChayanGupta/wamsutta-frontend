@@ -3,7 +3,7 @@ import Products from '@/Products'
 import { useSearchParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
-const page = () => {
+const Page = () => {
 
     const searchParams = useSearchParams()
     const [search, setSearch] = useState(searchParams.get('category'))
@@ -19,4 +19,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
