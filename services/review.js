@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const base_url = 'http://localhost:8080/api/v1/testimonial';
+const base_url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/testimonial`;
 
 export const addReview = async (data, token) => {
     return await axios.post(`${base_url}/add-testimonial`, data, {

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const cloudinary_url = 'https://api.cloudinary.com/v1_1/dwutzvwdf/image/upload';
-const base_url = 'http://localhost:8080/api/v1/products';
+const base_url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/products`;
 
 export const getNewArrivals = async () => {
     return await axios.get(`${base_url}/new-arrivals`).then(res=>res.data);
