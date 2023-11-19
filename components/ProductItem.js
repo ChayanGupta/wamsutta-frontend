@@ -1,7 +1,7 @@
 'use client'
 import { getProductDetails, getSpecificCategoryProducts } from '@/services/product'
 import React, { useEffect, useState } from 'react'
-import ReactImageMagnify from 'react-image-magnify'
+// import ReactImageMagnify from 'react-image-magnify'
 import '../styles/ProductItem.css'
 import { useDispatch } from 'react-redux'
 import { addCartData, addWishlistData } from '@/utils/CartSlice'
@@ -48,7 +48,7 @@ const ProductItem = ({ search }) => {
         <section className="text-gray-600 body-font overflow-hidden">
             <div className="container py-24 mx-auto">
                 <div className="mx-auto flex flex-wrap product-item-div">
-                    <ReactImageMagnify {...{
+                    {/* <ReactImageMagnify {...{
                         smallImage: {
                             alt: 'product',
                             src: main || product?.mainImage,
@@ -62,7 +62,8 @@ const ProductItem = ({ search }) => {
                         },
                         imageClassName:'lg:w-1/2 w-full lg:h-auto h-64 object-fit object-center rounded magnify-image',
                     }}
-                    />
+                    /> */}
+                    <Image src={main || product?.mainImage} alt='' width={150} height={200} />
                     <div className="lg:w-1/2 w-full lg:pl-10 mt-6 lg:mt-0 product-container">
                         <h1 className="text-gray-900 text-3xl title-font font-medium mb-5">{product?.productName}</h1>
                         <p className="leading-relaxed">{product?.description}</p>
