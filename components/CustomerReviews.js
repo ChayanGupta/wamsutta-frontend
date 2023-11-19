@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { IoStarSharp } from "react-icons/io5";
-import ProgressBar from "@ramonak/react-progress-bar";
 import { FaUserCircle } from "react-icons/fa";
 import { RiStarSLine } from "react-icons/ri";
 import Rating from 'react-rating';
@@ -10,39 +9,39 @@ import '../styles/CustomerReviews.css'
 const CustomerReviews = ({ reviews }) => {
 
     const [overallReviews, setOverallReviews] = useState(0)
-    const [eachRating, setEachRating] = useState({
-        'five': 0,
-        'four': 0,
-        'three': 0,
-        'two': 0,
-        'one': 0
-    })
+    // const [eachRating, setEachRating] = useState({
+    //     'five': 0,
+    //     'four': 0,
+    //     'three': 0,
+    //     'two': 0,
+    //     'one': 0
+    // })
 
     useEffect(() => {
         let star = 0;
-        let ratings = {
-            'five': 0,
-            'four': 0,
-            'three': 0,
-            'two': 0,
-            'one': 0
-        }
+        // let ratings = {
+        //     'five': 0,
+        //     'four': 0,
+        //     'three': 0,
+        //     'two': 0,
+        //     'one': 0
+        // }
         star = reviews.reduce((star, review) => {
-            if (review.star == 5) {
-                ratings.five += 1;
-            } else if (review.star == 4) {
-                ratings.four += 1;
-            } else if (review.star == 3) {
-                ratings.three += 1;
-            } else if (review.star == 2) {
-                ratings.two += 1;
-            } else {
-                ratings.one += 1;
-            }
+            // if (review.star == 5) {
+            //     ratings.five += 1;
+            // } else if (review.star == 4) {
+            //     ratings.four += 1;
+            // } else if (review.star == 3) {
+            //     ratings.three += 1;
+            // } else if (review.star == 2) {
+            //     ratings.two += 1;
+            // } else {
+            //     ratings.one += 1;
+            // }
             return review.star + star
         }, 0)
         setOverallReviews(star)
-        setEachRating(ratings)
+        // setEachRating(ratings)
         const pageCount = Math.ceil(reviews.length / 2);
         setPageCount(pageCount)
         changeItems()
@@ -90,7 +89,7 @@ const CustomerReviews = ({ reviews }) => {
                             />
                             <p className='text-black text-xl mt-2 font-sans font-semibold'>{(overallReviews/(reviews.length>0?reviews.length:1)).toFixed(1)} out of 5</p>
                         </div>
-                        <div className='mt-2'>
+                        {/* <div className='mt-2'>
                             5 star<ProgressBar animateOnRender={true} completed={((eachRating.five / (reviews.length>0?reviews.length:1)) * 100).toFixed(0)} bgColor='rgba(251,146,60,1)' borderRadius='25px' labelColor='grey' labelAlignment='outside' />
                         </div>
                         <div className='mt-2'>
@@ -104,7 +103,7 @@ const CustomerReviews = ({ reviews }) => {
                         </div>
                         <div className='mt-2'>
                             1 star<ProgressBar animateOnRender={true} completed={((eachRating.one / (reviews.length>0?reviews.length:1)) * 100).toFixed(0)} bgColor='rgba(251,146,60,1)' borderRadius='25px' labelColor='grey' labelAlignment='outside' />
-                        </div>
+                        </div> */}
                     </div>
                     <div className="lg:w-1/2 w-full lg:pl-10 mt-6 lg:mt-0 product-container">
                         <h2 className='font-sans font-semibold text-xl text-black'>Reviews</h2>
