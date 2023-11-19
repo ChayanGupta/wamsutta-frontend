@@ -3,7 +3,6 @@ import axios from "axios";
 const base_url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/address`;
 
 export const addAddress = async (data, token) => {
-    console.log(data)
     return await axios.post(`${base_url}/add-address`, data, {
         headers: {
             Authorization: `Bearer ${token}`

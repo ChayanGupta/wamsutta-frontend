@@ -26,7 +26,6 @@ const Navbar = () => {
   useEffect(() => {
     async function loadData() {
       const user = await decryptData('user')
-      console.log("line 27", user)
       if (user !== null) {
         setLogout(true)
       }
@@ -37,7 +36,6 @@ const Navbar = () => {
   useEffect(() => {
     async function loadData() {
       const user = await decryptData('user')
-      console.log("line 27", user)
       if (user !== null) {
         setLogout(true)
       }

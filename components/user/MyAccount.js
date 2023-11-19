@@ -37,7 +37,6 @@ const MyAccount = ({ setShowComponent }) => {
         decryptData('user').then(data => {
             if (data !== null) {
                 getProfileDetails(data.email).then(res => {
-                    console.log(res)
                     data.lastName = res.lastName,
                         data.address = res.address
                     encryptData('user', data)
@@ -68,7 +67,6 @@ const MyAccount = ({ setShowComponent }) => {
             decryptData('user').then(data => {
                 if (data != null) {
                     getProfileDetails(data.email).then(res => {
-                        console.log(res)
                         data.lastName = res.lastName,
                             data.address = res.address
                         encryptData('user', data)

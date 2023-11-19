@@ -66,8 +66,7 @@ const AddAddress = () => {
         }else{
             addAddress(address,token).then(()=>{
                 toast.success('Address Added Successfully!!')
-            }).catch((err)=>{
-                console.log(err)
+            }).catch(()=>{
                 toast.error('Something went wrong!!')
             })
         }

@@ -22,15 +22,12 @@ const ProductItem = ({ search }) => {
         const categoryName = search.slice(0,search.indexOf('1'))
         getProductDetails(searchString.slice(3)).then(res => {
             setProduct(res)
-            console.log(res)
             getProductReview(res.id).then(response=>{
-                console.log(response)
                 setReviews(response)
             })
         })
         getSpecificCategoryProducts(categoryName).then(res => {
             setProducts(res)
-            console.log(res)
         })
     }, [search])
 

@@ -58,17 +58,13 @@ const CustomerReviews = ({ reviews }) => {
 
     const changeItems = () => {
         const endOffset = itemOffset + 2;
-        console.log(reviews)
         const currentItems = reviews.slice(itemOffset, endOffset);
-        console.log("line 60", currentItems)
         setCurrentItems(currentItems)
     }
     
     useEffect(()=>{
         const endOffset = itemOffset + 2;
-        console.log(reviews)
         const currentItems = reviews.slice(itemOffset, endOffset);
-        console.log("line 60", currentItems)
         setCurrentItems(currentItems)
     },[itemOffset])
   
