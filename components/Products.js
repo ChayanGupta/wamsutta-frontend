@@ -22,7 +22,7 @@ const Products = ({ name }) => {
     return (
         <section className="text-gray-600 body-font">
             <h1 className='text-center mt-10 text-4xl underline italic font-bold underline-offset-8'>{name || 'No products in this category.'}</h1>
-            <div className="container py-24 mx-auto">
+            <div className="container py-12 mx-auto">
                 <div className="flex flex-wrap -m-4">
                     {products.map((prod) => {
                         return <div className="lg:w-1/4 md:w-1/2 mt-4 p-4 w-full border" key={prod.id}>
