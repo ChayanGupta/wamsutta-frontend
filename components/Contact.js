@@ -73,9 +73,9 @@ const Contact = () => {
                 </div>
                 <div className='contact-us-address'>
                     <h3>Address:</h3>
-                    <p>273-M, Khatiwala Tank,</p>
-                    <p>Indore, Madhya Pradesh - 452001</p>
-                    <p>India</p>
+                    <p>799 Coliseum Way</p>
+                    <p>Midvale, UT - 84047</p>
+                    <p>United States</p>
                     <p><a href='mailto:help@wamsuttadreamzone.com'>Mail : help@wamsuttadreamzone.com</a></p>
                 </div>
             </div>

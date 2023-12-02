@@ -16,7 +16,7 @@ const Distributer = () => {
                     <div>
                         <h1 className='text-2xl'>BED BATH & BEYOND</h1>
                         <p>799 Coliseum Way,</p>
-                        <p>Midvale, UT,</p>
+                        <p>Midvale, Utah,</p>
                         <p>United States - 84047</p>
                     </div>
                 </div>

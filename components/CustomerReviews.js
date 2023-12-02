@@ -87,7 +87,7 @@ const CustomerReviews = ({ reviews }) => {
                                 initialRating={(overallReviews / (reviews.length>0?reviews.length:1)).toFixed(1)}
                                 readonly={true}
                             />
-                            <p className='text-black text-xl mt-2 font-sans font-semibold'>{(overallReviews/(reviews.length>0?reviews.length:1)).toFixed(1)} out of 5</p>
+                            <p className='text-black text-xl mt-2 font-sans font-semibold self-start'>{(overallReviews/(reviews.length>0?reviews.length:1)).toFixed(1)} out of 5</p>
                         </div>
                         {/* <div className='mt-2'>
                             5 star<ProgressBar animateOnRender={true} completed={((eachRating.five / (reviews.length>0?reviews.length:1)) * 100).toFixed(0)} bgColor='rgba(251,146,60,1)' borderRadius='25px' labelColor='grey' labelAlignment='outside' />
@@ -138,6 +138,7 @@ const CustomerReviews = ({ reviews }) => {
                             previousLabel="< Previous"
                             renderOnZeroPageCount={null}
                             containerClassName='flex gap-x-4 mt-2'
+                            pageLabelBuilder={()=>itemOffset+1}
                         />
                     </div>
                 </div>
