@@ -63,7 +63,7 @@ const ProductItem = ({ search }) => {
                         imageClassName:'lg:w-1/2 w-full lg:h-auto h-64 object-fit object-center rounded magnify-image',
                     }}
                     /> */}
-                    <Image src={main || product?.mainImage} alt='' width={150} height={200} />
+                    <Image src={main || product?.mainImage} alt='' width={400} height={200} style={{height:'50vh'}} />
                     <div className="lg:w-1/2 w-full lg:pl-10 mt-6 lg:mt-0 product-container">
                         <h1 className="text-gray-900 text-3xl title-font font-medium mb-5">{product?.productName}</h1>
                         <p className="leading-relaxed">{product?.description}</p>
